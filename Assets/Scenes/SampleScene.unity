@@ -2163,8 +2163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3de6895cb5b5c4bbd1bb5cf975345b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 1578067024}
-  target: {fileID: 1780053892}
+  safe: 0
 --- !u!65 &1174705527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2176,7 +2175,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 3, y: 4, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1174705528
 Transform:
@@ -2186,7 +2185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174705525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 1.53, z: 2.58}
+  m_LocalPosition: {x: -0.44, y: 1.48, z: 2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
