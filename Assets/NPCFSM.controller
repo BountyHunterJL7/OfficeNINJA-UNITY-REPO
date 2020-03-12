@@ -33,7 +33,7 @@ MonoBehaviour:
   NPC: {fileID: 0}
   agent: {fileID: 0}
   opponent: {fileID: 0}
-  speed: 2
+  speed: 3
   rotSpeed: 1
   accuracy: 3
 --- !u!91 &9100000
