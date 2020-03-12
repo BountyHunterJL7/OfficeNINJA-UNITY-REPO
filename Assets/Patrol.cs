@@ -7,7 +7,6 @@ public class Patrol : NPCbaseFSM
     GameObject[] waypoints;
     int currentWP;
 
-
     void awake()
     {
         waypoints = GameObject.FindGameObjectsWithTag("waypoint");
@@ -28,7 +27,7 @@ public class Patrol : NPCbaseFSM
         if (Vector3.Distance(waypoints[currentWP].transform.position, 
         NPC.transform.position) < accuracy)
         {
-            currentWP++;
+            currentWP = Random.Range(1, 8);
             if (currentWP >= waypoints.Length)
             {
                 currentWP = 0;
