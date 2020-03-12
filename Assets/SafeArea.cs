@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class SafeArea : MonoBehaviour
 {
-    public bool safe;
+    public Boss bossState;
+
     void Start()
     {
 
     }
 
-    public void OnTriggerEnter(Collider other) // When the player enters a "Safe" area
+    private void OnTriggerEnter(Collider other) // When the player enters a "Safe" area
     {
-        Debug.Log("Player is in the safe area");
-        safe = true;
+        if (other.gameObject.tag.Equals("Player") == true)
+        {
+            Debug.Log("Player is in the safe area");
+            bossState.target = null;
+        }
+            
     }
 
-    public void OnTriggerStay(Collider other) // When the player stays in a "Safe" area
+    private void OnTriggerStay(Collider other) // When the player stays in a "Safe" area
     {
-        Debug.Log("Player is in the safe area");
-        safe = true;
+        if (other.gameObject.tag.Equals("Player") == true)
+        {
+            Debug.Log("Player is in the safe area");
+            bossState.target = null;
+        }
     }
 
-    public void OnTriggerExit(Collider other) // When the player exits a "Safe" area
+    private void OnTriggerExit(Collider other) // When the player exits a "Safe" area
     {
-        Debug.Log("Player has left the safe area");
-        safe = false;
+        if (other.gameObject.tag.Equals("Player") == true)
+        {
+            Debug.Log("Player is in the safe area");
+            bossState.target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        
     }
 
     // Start is called before the first frame update

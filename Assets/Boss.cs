@@ -13,6 +13,7 @@ private UnityEngine.AI.NavMeshAgent navComponent;
     // Start is called before the first frame update
     void Start()
     {
+        
         target = GameObject.FindGameObjectWithTag("Player").transform;
         navComponent = this.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
