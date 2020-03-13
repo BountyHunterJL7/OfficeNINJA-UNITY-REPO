@@ -15,12 +15,14 @@ public class ObjectScript : MonoBehaviour
     private Rigidbody rb;
     private bool CurrentlyHeld;
     private bool Thrown;
+    private LayerMask layerMask;
     // Start is called before the first frame update
     void Start()
     {
         HoldCheck = PlayerPosition.GetComponent<HoldCheck>().IsHolding;
         rb = gameObject.GetComponent<Rigidbody>();
         Thrown = false;
+        layerMask = LayerMask.GetMask("Default");
     }
 
     // Update is called once per frame
@@ -30,13 +32,13 @@ public class ObjectScript : MonoBehaviour
         Ray cursorRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         //todo, add raycast check for objects
         HoldCheck = PlayerPosition.GetComponent<HoldCheck>().IsHolding;
-        if (Physics.SphereCast(cursorRay, 0.7f, out hit) || Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        if (Physics.SphereCast(cursorRay, 0.6f, out hit, Mathf.Infinity, layerMask) || Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
-            //Debug.LogWarning(hit.collider.name);
+            Debug.LogWarning(hit.collider.name);
             if (!HoldCheck && Input.GetMouseButtonDown(0) && PlayerDistance() < 3f && !Thrown && hit.collider.name == gameObject.name)
             {
                 Debug.Log("Item picked up");
-                Debug.Log(PlayerDistance());
+                //Debug.Log(PlayerDistance());
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = true;
                 CurrentlyHeld = true;
                 gameObject.transform.parent = PlayerHand.transform;
@@ -56,14 +58,10 @@ public class ObjectScript : MonoBehaviour
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = false;
                 CurrentlyHeld = false;
                 Thrown = true;
-             
+
                 //Debug.LogWarning(ThrowDirection);
 
             }
-        }
-        else
-        {
-            Debug.LogError("!! UNEXPECTED THROWING ACTION ERROR !!");
         }
     }
 
