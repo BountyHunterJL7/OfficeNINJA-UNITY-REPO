@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class winScript : MonoBehaviour
 {
     Animator anim;
 
+    [SerializeField] private Image customImage;
 
 
     void Start()
@@ -17,10 +19,10 @@ public class winScript : MonoBehaviour
     {
         if(collision.gameObject.tag=="Player")
   
-            {
+        {
+            customImage.enabled = true;
+        }
 
-            }
 
-        
     }
 }
