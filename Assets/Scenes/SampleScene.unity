@@ -4280,7 +4280,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 44.78461
+  m_FocalLength: 28.970562
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -4289,7 +4289,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30.000002
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6596,9 +6596,9 @@ CapsuleCollider:
   m_GameObject: {fileID: 1578067024}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.59
-  m_Height: 3.81
+  m_Height: 1.55
   m_Direction: 1
   m_Center: {x: 0, y: 1.03, z: 0}
 --- !u!1001 &1621833823
