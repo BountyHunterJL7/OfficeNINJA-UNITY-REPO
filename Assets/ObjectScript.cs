@@ -27,10 +27,10 @@ public class ObjectScript : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Ray cursorRay = Camera.main.ScreenPointToRay(Input.mousePosition);  
+        Ray cursorRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         //todo, add raycast check for objects
         HoldCheck = PlayerPosition.GetComponent<HoldCheck>().IsHolding;
-        if (Physics.SphereCast(cursorRay, 0.7f, out hit, 0) || Input.GetMouseButton(0) || Input.GetMouseButton(1))
+        if (Physics.Raycast(cursorRay, out hit) || Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
             Debug.LogWarning(hit.collider.name);
             if (!HoldCheck && Input.GetMouseButtonDown(0) && PlayerDistance() < 3f && !Thrown && hit.collider.name == gameObject.name)
