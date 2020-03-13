@@ -37,6 +37,7 @@ public class ObjectScript : MonoBehaviour
             Debug.LogWarning(hit.collider.name);
             if (!HoldCheck && Input.GetMouseButtonDown(0) && PlayerDistance() < 3f && !Thrown && hit.collider.name == gameObject.name)
             {
+                Debug.LogWarning(hit.collider.name);
                 Debug.Log("Item picked up");
                 //Debug.Log(PlayerDistance());
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = true;
@@ -47,7 +48,7 @@ public class ObjectScript : MonoBehaviour
                 rb.detectCollisions = false;
                 rb.isKinematic = true;
             }
-            if (HoldCheck && CurrentlyHeld && Input.GetMouseButtonDown(1) && !Thrown)
+            else if (HoldCheck && CurrentlyHeld && Input.GetMouseButtonDown(1) && !Thrown)
             {
                 rb.detectCollisions = true;
                 rb.isKinematic = false;
@@ -61,6 +62,10 @@ public class ObjectScript : MonoBehaviour
 
                 //Debug.LogWarning(ThrowDirection);
 
+            }
+            else
+            {
+                Debug.Log("??");
             }
         }
     }
