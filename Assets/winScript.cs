@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class winScript : MonoBehaviour
 {
     Animator anim;
+
+
 
     void Start()
     {
@@ -13,8 +16,11 @@ public class winScript : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag=="Player")
-        {
-            
-        }
+  
+            {
+
+            }
+
+        
     }
 }
