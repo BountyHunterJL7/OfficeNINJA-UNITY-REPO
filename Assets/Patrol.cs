@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Patrol : NPCbaseFSM
 {
@@ -10,6 +11,7 @@ public class Patrol : NPCbaseFSM
     void awake()
     {
         waypoints = GameObject.FindGameObjectsWithTag("waypoint");
+        
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

@@ -9,6 +9,8 @@ public class FieldofView : MonoBehaviour
 	[Range(0,360)]
 	public float viewAngle;
 
+	public Alert boolSet;
+
 	public LayerMask targetMask;
 	public LayerMask obstacleMask;
 
@@ -22,12 +24,21 @@ public class FieldofView : MonoBehaviour
 	public MeshFilter viewMeshFilter;
 	Mesh viewMesh;
 
+	Animator anim;
+
 	void Start() {
 		viewMesh = new Mesh ();
 		viewMesh.name = "View Mesh";
 		viewMeshFilter.mesh = viewMesh;
+		anim = GetComponent<Animator>();
 
 		StartCoroutine ("FindTargetsWithDelay", .2f);
+
+
+		//changing alert bool
+		GameObject alertSet = GameObject.Find("AlertBar");
+
+		boolSet = alertSet.GetComponent<Alert>();
 	}
 
 
@@ -45,7 +56,6 @@ public class FieldofView : MonoBehaviour
 	void FindVisibleTargets() {
 		visibleTargets.Clear ();
 		Collider[] targetsInViewRadius = Physics.OverlapSphere (transform.position, viewRadius, targetMask);
-
 		for (int i = 0; i < targetsInViewRadius.Length; i++) {
 			Transform target = targetsInViewRadius [i].transform;
 			Vector3 dirToTarget = (target.position - transform.position).normalized;
@@ -53,6 +63,14 @@ public class FieldofView : MonoBehaviour
 				float dstToTarget = Vector3.Distance (transform.position, target.position);
 				if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
 					visibleTargets.Add (target);
+					anim.SetBool("playerFound", true);
+					
+					boolSet.alert = true;
+				}
+				else
+				{
+					anim.SetBool("playerFound", false);
+					boolSet.alert = false;
 				}
 			}
 		}
