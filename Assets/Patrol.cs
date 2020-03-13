@@ -19,7 +19,7 @@ public class Patrol : NPCbaseFSM
     {
         waypoints = GameObject.FindGameObjectsWithTag("waypoint");
         base.OnStateEnter(animator,stateInfo,layerIndex);
-        currentWP = 3;
+        currentWP = Random.Range(1, 8);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

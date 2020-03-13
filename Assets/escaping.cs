@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class escaping : MonoBehaviour
 {
 
-    [SerializeField] private Image customImage;
+    public Image customImage;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,14 +16,4 @@ public class escaping : MonoBehaviour
         }
             
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("player"))
-        {
-            customImage.enabled = false;
-        }
-
-    }
-
 }
