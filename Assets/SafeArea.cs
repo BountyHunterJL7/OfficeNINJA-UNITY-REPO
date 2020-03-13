@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SafeArea : MonoBehaviour
 {
-    public Boss bossState;
+    public GameObject playerSafetyState;
 
     void Start()
     {
@@ -15,8 +15,9 @@ public class SafeArea : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player") == true)
         {
-            Debug.Log("Player is in the safe area");
-            bossState.target = null;
+            playerSafetyState.GetComponent<PlayerSafety>().isSafe = true;
+            //Debug.Log("Player is in the safe area");
+            
         }
             
     }
@@ -25,8 +26,8 @@ public class SafeArea : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player") == true)
         {
-            Debug.Log("Player is in the safe area");
-            bossState.target = null;
+            //Debug.Log("Player is in the safe area");
+
         }
     }
 
@@ -34,8 +35,10 @@ public class SafeArea : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player") == true)
         {
-            Debug.Log("Player is in the safe area");
-            bossState.target = GameObject.FindGameObjectWithTag("Player").transform;
+            
+            playerSafetyState.GetComponent<PlayerSafety>().isSafe = false;
+            //Debug.Log("Player has left the safe area");
+            Debug.Log(playerSafetyState.GetComponent<PlayerSafety>().isSafe);
         }
         
     }
@@ -46,6 +49,6 @@ public class SafeArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(playerSafetyState.GetComponent<PlayerSafety>().isSafe);
     }
 }
