@@ -53,7 +53,7 @@ public class Patrol : NPCbaseFSM
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //agent.Stop();
-        agent.isStopped = true;
+        //agent.isStopped = true;
         agent.ResetPath();
     }
 }
