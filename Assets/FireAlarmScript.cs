@@ -5,13 +5,16 @@ using UnityEngine;
 public class FireAlarmScript : MonoBehaviour
 {
     public Transform player;
-    public float distance;
+    public Transform boss;
+    private float bossDistance;
+    private float playerDistance;
+    Animator animOther;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animOther = boss.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,13 +42,23 @@ public class FireAlarmScript : MonoBehaviour
         Ray cursorRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(cursorRay, out hit, 100.0f))
         {
-            distance = Vector3.Distance(player.position, transform.position);
-            if (hit.transform.name == "mesh_firealarm" && Input.GetMouseButtonDown(0) && distance<2.0)
+            playerDistance = Vector3.Distance(player.position, transform.position);
+            if (hit.transform.name == "mesh_firealarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
             {
                 Debug.Log("You clicked");
-                Debug.Log(distance);
+                animOther.SetBool("alarmRinging", true);
 
             }
+
+            bossDistance = Vector3.Distance(boss.position, transform.position);
+            if(bossDistance < 4.0)
+            {
+                animOther.SetBool("alarmRinging", false);
+
+            }
+
+
+
         }
 
 
