@@ -1442,7 +1442,7 @@ GameObject:
   - component: {fileID: 334885379}
   - component: {fileID: 334885381}
   - component: {fileID: 334885380}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ViewFoV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8879,7 +8879,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsHolding: 0
-  cam: {fileID: 0}
+  MainCam: {fileID: 0}
+  lr: {fileID: 0}
+  ThrowPoint: {x: 0, y: 0, z: 0}
+  LineSegment: 10
+  ThrowIndicator: {fileID: 0}
+  IndVis: 0
 --- !u!4 &1780053892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400046, guid: 08a461955fe2451479862746f7aaf670,
