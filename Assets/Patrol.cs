@@ -6,12 +6,14 @@ using UnityEngine.AI;
 public class Patrol : NPCbaseFSM
 {
     GameObject[] waypoints;
+    GameObject[] NPCwaypoints;
     int currentWP;
+    int NPCcurrentWP;
 
     void awake()
     {
         waypoints = GameObject.FindGameObjectsWithTag("waypoint");
-        
+        NPCwaypoints = GameObject.FindGameObjectsWithTag("NPCWaypoint");
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -26,7 +28,9 @@ public class Patrol : NPCbaseFSM
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {   
+
         if(waypoints.Length == 0) return;
+        
         if (Vector3.Distance(waypoints[currentWP].transform.position, 
         NPC.transform.position) < accuracy)
         {
