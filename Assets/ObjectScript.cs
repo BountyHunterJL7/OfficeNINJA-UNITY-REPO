@@ -41,6 +41,7 @@ public class ObjectScript : MonoBehaviour
                 //Debug.LogWarning(hit.collider.name);
                 Debug.Log("Item picked up");
                 //Debug.Log(PlayerDistance());
+
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = true;
                 CurrentlyHeld = true;
                 gameObject.transform.parent = PlayerHand.transform;
@@ -59,7 +60,7 @@ public class ObjectScript : MonoBehaviour
                 Vector3 vo = CalculateVelocty(hit.point, transform.position, 1f);
 
 
-
+                Physics.IgnoreCollision(PlayerPosition.GetComponent<Collider>(), GetComponent<Collider>(), true);
                 rb.velocity = vo;
                 //gameObject.transform.position = hit.point;
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = false;
@@ -71,7 +72,7 @@ public class ObjectScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("??");
+                //Debug.Log("??");
             }
         }
     }
@@ -87,6 +88,7 @@ public class ObjectScript : MonoBehaviour
                 new Vector3(transform.position.x, 0, transform.position.z), 
                 Quaternion.identity);
             Thrown = false;
+            Physics.IgnoreCollision(PlayerPosition.GetComponent<Collider>(), GetComponent<Collider>(), false);
         }
         
     }
