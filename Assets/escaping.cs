@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class escaping : MonoBehaviour
 {
 
-    [SerializeField] private Image customImage;
+    [SerializeField] public Image customImage;
 
     private void OnTriggerEnter(Collider other)
     {

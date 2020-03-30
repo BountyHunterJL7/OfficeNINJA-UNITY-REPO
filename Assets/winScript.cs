@@ -8,7 +8,7 @@ public class winScript : MonoBehaviour
 {
     Animator anim;
 
-    [SerializeField] private Image customImage;
+    [SerializeField] public Image customImage;
 
 
     void Start()
