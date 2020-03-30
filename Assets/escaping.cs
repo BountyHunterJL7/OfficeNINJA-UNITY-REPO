@@ -14,16 +14,6 @@ public class escaping : MonoBehaviour
         {
             customImage.enabled = true;
         }
-            
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("player"))
-        {
-            customImage.enabled = false;
-        }
 
     }
-
 }
