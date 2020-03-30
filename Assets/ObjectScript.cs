@@ -22,6 +22,7 @@ public class ObjectScript : MonoBehaviour
         HoldCheck = PlayerPosition.GetComponent<HoldCheck>().IsHolding;
         rb = gameObject.GetComponent<Rigidbody>();
         Thrown = false;
+        //Physics.IgnoreLayerCollision(10, 10);
         layerMask = LayerMask.GetMask("Default");
     }
 
@@ -37,7 +38,7 @@ public class ObjectScript : MonoBehaviour
             Debug.LogWarning(hit.collider.name);
             if (!HoldCheck && Input.GetMouseButtonDown(0) && PlayerDistance() < 3f && !Thrown && hit.collider.name == gameObject.name)
             {
-                Debug.LogWarning(hit.collider.name);
+                //Debug.LogWarning(hit.collider.name);
                 Debug.Log("Item picked up");
                 //Debug.Log(PlayerDistance());
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = true;
@@ -54,7 +55,12 @@ public class ObjectScript : MonoBehaviour
                 rb.isKinematic = false;
                 gameObject.transform.parent = null;
                 transform.position = new Vector3(transform.position.x, 2, transform.position.z);
-                rb.AddForce((hit.point - PlayerPosition.transform.position).normalized * 10 + (Vector3.up * 5), ForceMode.Impulse);
+
+                Vector3 vo = CalculateVelocty(hit.point, transform.position, 1f);
+
+
+
+                rb.velocity = vo;
                 //gameObject.transform.position = hit.point;
                 PlayerPosition.GetComponent<HoldCheck>().IsHolding = false;
                 CurrentlyHeld = false;
@@ -88,5 +94,25 @@ public class ObjectScript : MonoBehaviour
     private float PlayerDistance()
     {
         return Vector3.Distance(gameObject.transform.position, PlayerPosition.transform.position);
+    }
+
+
+    Vector3 CalculateVelocty(Vector3 target, Vector3 origin, float time)
+    {
+        Vector3 distance = target - origin;
+        Vector3 distanceXz = distance;
+        distanceXz.y = 0f;
+
+        float sY = distance.y;
+        float sXz = distanceXz.magnitude;
+
+        float Vxz = sXz * time;
+        float Vy = (sY / time) + (0.5f * Mathf.Abs(Physics.gravity.y) * time);
+
+        Vector3 result = distanceXz.normalized;
+        result *= Vxz;
+        result.y = Vy;
+
+        return result;
     }
 }
