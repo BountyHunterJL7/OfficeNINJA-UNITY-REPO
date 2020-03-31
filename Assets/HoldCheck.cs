@@ -60,6 +60,7 @@ public class HoldCheck : MonoBehaviour
         IsHolding = false;
         IndVis = false;
         lr.positionCount = LineSegment;
+        lr.GetComponent<Renderer>().enabled = false;
     }
 
 

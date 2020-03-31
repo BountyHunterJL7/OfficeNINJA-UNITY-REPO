@@ -16,6 +16,7 @@ public class ObjectScript : MonoBehaviour
     private bool CurrentlyHeld;
     private bool Thrown;
     private LayerMask layerMask;
+    public ParticleSystem hitAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +88,8 @@ public class ObjectScript : MonoBehaviour
             Instantiate(AlertOject, 
                 new Vector3(transform.position.x, 0, transform.position.z), 
                 Quaternion.identity);
+            ParticleSystem NewHit = Instantiate(hitAnim, new Vector3(transform.position.x, 0.01f, transform.position.z), Quaternion.Euler(90, 0, 0));
+            Destroy(NewHit, 5f);
             Thrown = false;
             Physics.IgnoreCollision(PlayerPosition.GetComponent<Collider>(), GetComponent<Collider>(), false);
         }
