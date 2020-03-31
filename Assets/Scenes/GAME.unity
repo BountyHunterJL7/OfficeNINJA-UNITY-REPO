@@ -2393,7 +2393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a3f3f21035a7fec4d8d213a85df99633, type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a3f3f21035a7fec4d8d213a85df99633, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4144,8 +4144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -4472,7 +4472,7 @@ Transform:
   - {fileID: 133163945}
   - {fileID: 701991609}
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 179.99701, z: 0}
 --- !u!1 &837681906
 GameObject:
@@ -4656,8 +4656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -5444,8 +5444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -6398,8 +6398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: -0.05944023, y: 0.09503773, z: 0.03589871}
   PickRotation: {x: -4.005, y: 194.207, z: 175.917}
   HoldCheck: 0
@@ -7957,7 +7957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca57f44225d2344eabaeade052428ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1780053887}
+  player: {fileID: 0}
   balls: []
 --- !u!114 &1578067028
 MonoBehaviour:
@@ -8057,8 +8057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: 0.07566281, y: 0.08235657, z: 0.07084047}
   PickRotation: {x: -44.944, y: -34.337, z: 106.359}
   HoldCheck: 0
@@ -9367,8 +9367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 2070645016}
-  PlayerPosition: {fileID: 1780053887}
+  PlayerHand: {fileID: 0}
+  PlayerPosition: {fileID: 0}
   PickPosition: {x: 0.07566281, y: 0.08235657, z: 0.07084047}
   PickRotation: {x: -44.944, y: -34.337, z: 106.359}
   HoldCheck: 0
@@ -11002,12 +11002,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 449.993, z: 0}
---- !u!1 &2070645016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100006, guid: 08a461955fe2451479862746f7aaf670,
-    type: 3}
-  m_PrefabInstance: {fileID: 456989202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2079437022
 PrefabInstance:
   m_ObjectHideFlags: 0
