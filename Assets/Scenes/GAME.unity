@@ -828,6 +828,18 @@ CapsuleCollider:
   m_Height: 2.3589578
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!122 &133163948
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133163946}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294948096
+  m_Size: 4
 --- !u!1 &170140536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,7 +3292,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668245567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11077,6 +11089,7 @@ GameObject:
   - component: {fileID: 2083520990}
   - component: {fileID: 2083520989}
   - component: {fileID: 2083520988}
+  - component: {fileID: 2083520992}
   m_Layer: 0
   m_Name: Sphere (8)
   m_TagString: Untagged
@@ -11104,7 +11117,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083520987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11157,6 +11170,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &2083520992
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083520987}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294948096
+  m_Size: 4
 --- !u!1 &2095669543
 GameObject:
   m_ObjectHideFlags: 0
