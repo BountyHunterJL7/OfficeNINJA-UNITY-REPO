@@ -8,6 +8,6 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     public void restartGame()
     {
-        SceneManager.LoadScene("TESTING VER");
+        SceneManager.LoadScene("GAME");
     }
 }
