@@ -6,15 +6,18 @@ public class FireAlarmScript : MonoBehaviour
 {
     public Transform player;
     public Transform boss;
+    public AudioSource alarmSound;
     private float bossDistance;
     private float playerDistance;
     Animator animOther;
-    
+    private LayerMask layerMask;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animOther = boss.GetComponent<Animator>();
+        layerMask = LayerMask.GetMask("Default");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,13 +43,15 @@ public class FireAlarmScript : MonoBehaviour
     {
         RaycastHit hit;
         Ray cursorRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(cursorRay, out hit, 100.0f))
+        if (Physics.SphereCast(cursorRay, 0.6f, out hit, Mathf.Infinity, layerMask))
         {
+            //Debug.LogError("Ray");
             playerDistance = Vector3.Distance(player.position, transform.position);
             if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
             {
                 Debug.Log("You clicked");
                 animOther.SetBool("alarmRinging", true);
+                alarmSound.Play();
 
             }
 
