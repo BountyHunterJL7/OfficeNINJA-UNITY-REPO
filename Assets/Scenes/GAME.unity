@@ -177,6 +177,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f29f93f6cf7c844b4c2bbbf5fb3e9f, type: 3}
+--- !u!1 &6176603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 08a461955fe2451479862746f7aaf670,
+    type: 3}
+  m_PrefabInstance: {fileID: 456989202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &46266729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,8 +4150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 0}
-  PlayerPosition: {fileID: 0}
+  PlayerHand: {fileID: 6176603}
+  PlayerPosition: {fileID: 1780053887}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -4656,8 +4662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 0}
-  PlayerPosition: {fileID: 0}
+  PlayerHand: {fileID: 6176603}
+  PlayerPosition: {fileID: 1780053887}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -5444,8 +5450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 0}
-  PlayerPosition: {fileID: 0}
+  PlayerHand: {fileID: 6176603}
+  PlayerPosition: {fileID: 1780053887}
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
@@ -6398,8 +6404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 0}
-  PlayerPosition: {fileID: 0}
+  PlayerHand: {fileID: 6176603}
+  PlayerPosition: {fileID: 1780053887}
   PickPosition: {x: -0.05944023, y: 0.09503773, z: 0.03589871}
   PickRotation: {x: -4.005, y: 194.207, z: 175.917}
   HoldCheck: 0
@@ -8057,8 +8063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a94b43fe767824ba74b7d73cc91e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHand: {fileID: 0}
-  PlayerPosition: {fileID: 0}
+  PlayerHand: {fileID: 6176603}
+  PlayerPosition: {fileID: 1780053887}
   PickPosition: {x: 0.07566281, y: 0.08235657, z: 0.07084047}
   PickRotation: {x: -44.944, y: -34.337, z: 106.359}
   HoldCheck: 0
