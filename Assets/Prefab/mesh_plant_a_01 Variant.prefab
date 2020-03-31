@@ -29,6 +29,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27712378, y: 0.6824188, z: 0.26356038}
   m_Center: {x: 0, y: 0.3412094, z: 0}
+--- !u!122 &-2007057752115654526
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925261501984048889}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 0.5
 --- !u!82 &1619375868
 AudioSource:
   m_ObjectHideFlags: 0
@@ -145,6 +157,7 @@ MonoBehaviour:
   HitSound: {fileID: 1619375868}
   AlertOject: {fileID: 7499453097272061363, guid: 51d3b2b6d60045c4b9ebd60e3eb0fc1c,
     type: 3}
+  hitAnim: {fileID: 0}
 --- !u!1001 &4925261501984079961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,7 +167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6ce5771815230b44385950608b58d253, type: 3}
       propertyPath: m_Name
-      value: mesh_plant_a_01
+      value: mesh_plant_a_01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6ce5771815230b44385950608b58d253, type: 3}
       propertyPath: m_Layer
