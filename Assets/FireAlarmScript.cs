@@ -43,7 +43,7 @@ public class FireAlarmScript : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, 100.0f))
         {
             playerDistance = Vector3.Distance(player.position, transform.position);
-            if (hit.transform.name == "mesh_firealarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
+            if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
             {
                 Debug.Log("You clicked");
                 animOther.SetBool("alarmRinging", true);
