@@ -59,6 +59,7 @@ public class FireAlarmScript : MonoBehaviour
             if(bossDistance < 4.0)
             {
                 animOther.SetBool("alarmRinging", false);
+                alarmSound.Stop();
 
             }
 
