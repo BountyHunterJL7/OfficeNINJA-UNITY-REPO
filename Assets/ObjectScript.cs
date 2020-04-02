@@ -10,13 +10,14 @@ public class ObjectScript : MonoBehaviour
     public Vector3 PickPosition;
     public Vector3 PickRotation;
     public bool HoldCheck;
-    public AudioSource HitSound;
+    public AudioClip HitSound;
     public GameObject AlertOject;
     private Rigidbody rb;
     private bool CurrentlyHeld;
     private bool Thrown;
     private LayerMask layerMask;
     public GameObject hitAnim;
+    public GameObject breakAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,7 @@ public class ObjectScript : MonoBehaviour
                 rb.detectCollisions = false;
                 rb.isKinematic = true;
             }
-            else if (HoldCheck && CurrentlyHeld && Input.GetMouseButtonDown(1) && !Thrown)
+            else if (HoldCheck && CurrentlyHeld && Input.GetMouseButtonDown(0) && !Thrown)
             {
                 rb.detectCollisions = true;
                 rb.isKinematic = false;
@@ -84,14 +85,17 @@ public class ObjectScript : MonoBehaviour
         if (Thrown && collision.collider.tag != "Player")
         {
             Debug.Log(collision.collider.name);
-            HitSound.Play();
+            AudioSource.PlayClipAtPoint(HitSound, transform.position, 1f);
             Instantiate(AlertOject, 
                 new Vector3(transform.position.x, 0, transform.position.z), 
                 Quaternion.identity);
             GameObject NewHit = Instantiate(hitAnim, new Vector3(transform.position.x, 0.01f, transform.position.z), Quaternion.Euler(90, 0, 0));
             Destroy(NewHit, 5f);
-            Thrown = false;
             Physics.IgnoreCollision(PlayerPosition.GetComponent<Collider>(), GetComponent<Collider>(), false);
+            //TODO PLAY BREAK SFX 
+            GameObject NewBreakAnim = Instantiate(breakAnim, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Destroy(NewBreakAnim, 5f);
+            Destroy(gameObject);
         }
         
     }

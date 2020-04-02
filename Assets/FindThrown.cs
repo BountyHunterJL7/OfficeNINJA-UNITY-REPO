@@ -30,8 +30,15 @@ public class FindThrown : NPCbaseFSM
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        if (Distractions.Length == 0) return;
-        agent.destination = Distractions[0].transform.position;
+        if (Distractions.Length == 0)
+        {
+            return;
+        }
+        if (Distractions[0] != null)
+        {
+            agent.destination = Distractions[0].transform.position;
+        }
+        
         /*
         if (Vector3.Distance(Distractions[0].transform.position,
         NPC.transform.position) < accuracy)
