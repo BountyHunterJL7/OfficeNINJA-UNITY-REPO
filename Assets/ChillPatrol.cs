@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ChillPatrol : NPCbaseFSM
+public class ChillPatrol : StateMachineBehaviour
 {
     GameObject[] NPCwaypoints;
-    //public GameObject NPC;
+    //public GameObject NPC
     //public UnityEngine.AI.NavMeshAgent agent;
     int currentWP;
+    public GameObject NPC;
+    public NavMeshAgent agent;
+    public float timeLeft = 10;
+
+
+    
+
 
     void awake()
     {
+        
         NPCwaypoints = GameObject.FindGameObjectsWithTag("NPCwaypoint");
-        //agent = NPC.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //NPC = animator.gameObject;
-        //agent = NPC.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        NPC = animator.gameObject;
+        agent = NPC.GetComponent<NavMeshAgent>();
         NPCwaypoints = GameObject.FindGameObjectsWithTag("NPCwaypoint");
         base.OnStateEnter(animator, stateInfo, layerIndex);
         currentWP = Random.Range(1, 3);
@@ -34,8 +41,9 @@ public class ChillPatrol : NPCbaseFSM
         if (NPCwaypoints.Length == 0) return;
 
         if (Vector3.Distance(NPCwaypoints[currentWP].transform.position,
-        NPC.transform.position) < 3.0)
+        NPC.transform.position) < 1.0)
         {
+            animator.SetBool("idle", true);
             Debug.Log("New WP");
             currentWP = Random.Range(1, 3);
             if (currentWP >= NPCwaypoints.Length)
@@ -44,23 +52,16 @@ public class ChillPatrol : NPCbaseFSM
             }
         }
 
+        
+        
+
 
         agent.SetDestination(NPCwaypoints[currentWP].transform.position);
-        //rotate to face target waypoint
-        // var direction = waypoints[currentWP].transform.position - NPC.transform.position;
-        // NPC.transform.rotation = Quaternion.Slerp(NPC.transform.rotation, 
-        // Quaternion.LookRotation(direction), 
-        // rotSpeed * Time.deltaTime);
-
-        // NPC.transform.Translate(0, 0, Time.deltaTime * speed);
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //agent.Stop();
-        //agent.isStopped = true;
         agent.ResetPath();
     }
 }
