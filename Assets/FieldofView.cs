@@ -36,7 +36,7 @@ public class FieldofView : MonoBehaviour
 
 
 		//changing alert bool
-		GameObject alertSet = GameObject.Find("AlertBar");
+		GameObject alertSet = GameObject.FindWithTag("alert");
 
 		boolSet = alertSet.GetComponent<Alert>();
 	}
