@@ -18,6 +18,7 @@ TagManager:
   - DistractionPoint
   - FireAlarm
   - NPCwaypoint
+  - alert
   layers:
   - Default
   - TransparentFX
