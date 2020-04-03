@@ -11,7 +11,6 @@ public class FireAlarmScript : MonoBehaviour
     private float playerDistance;
     Animator animOther;
     private LayerMask layerMask;
-    private bool alarmOnce;
 
 
     // Start is called before the first frame update
@@ -48,23 +47,20 @@ public class FireAlarmScript : MonoBehaviour
         {
             //Debug.LogError("Ray");
             playerDistance = Vector3.Distance(player.position, transform.position);
-            if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance < 3.0 && alarmOnce == false)
+            if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
             {
                 Debug.Log("You clicked");
                 animOther.SetBool("alarmRinging", true);
                 alarmSound.Play();
-                alarmOnce = true;
-                
-                
 
             }
 
             bossDistance = Vector3.Distance(boss.position, transform.position);
-            if(bossDistance < 2.0)
+            if(bossDistance < 4.0)
             {
                 animOther.SetBool("alarmRinging", false);
                 alarmSound.Stop();
-                
+
             }
 
 

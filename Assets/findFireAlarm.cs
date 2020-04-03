@@ -6,11 +6,7 @@ using UnityEngine.AI;
 public class findFireAlarm : NPCbaseFSM
 {
     GameObject AlarmPosition;
-    Transform AlarmTran;
     float alarmDistance;
-    float timeLeft = 10;
-    
-    Vector3 myVector;
     private void Awake()
     {
         AlarmPosition = GameObject.FindGameObjectWithTag("FireAlarm");
@@ -32,14 +28,6 @@ public class findFireAlarm : NPCbaseFSM
     {
         Debug.Log("GotTotheagent");
         agent.destination = AlarmPosition.transform.position;
-       
-
-        myVector = new Vector3(AlarmPosition.transform.position.x, 0.0f, AlarmPosition.transform.position.z);
-        if (Vector3.Distance(agent.destination,animator.gameObject.transform.position) < 4.0) {
-            animator.gameObject.transform.LookAt(myVector);
-            animator.SetBool("idle", true);
-             
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
