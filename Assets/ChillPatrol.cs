@@ -41,7 +41,7 @@ public class ChillPatrol : StateMachineBehaviour
         if (NPCwaypoints.Length == 0) return;
 
         if (Vector3.Distance(NPCwaypoints[currentWP].transform.position,
-        NPC.transform.position) < 1.0)
+        NPC.transform.position) < 2.0)
         {
             animator.SetBool("idle", true);
             Debug.Log("New WP");

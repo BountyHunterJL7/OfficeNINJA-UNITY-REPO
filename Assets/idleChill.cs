@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class idleChill : StateMachineBehaviour
 {
-    private float timeLeft = 10;
+    private float timeLeft = 5;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timeLeft = 10;    
+        timeLeft = 5;    
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
