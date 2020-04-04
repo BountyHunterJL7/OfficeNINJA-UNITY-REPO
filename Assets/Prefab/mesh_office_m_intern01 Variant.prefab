@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &4773010543410139038
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815190493789200517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.74
+  m_Height: 2.68
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.13, z: 0}
 --- !u!1001 &3815190493789234773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +23,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100048, guid: 4a57d19eb4452ff498c17131cefb7882, type: 3}
       propertyPath: m_Name
-      value: mesh_office_m_intern01
+      value: mesh_office_m_intern01 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 4a57d19eb4452ff498c17131cefb7882, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,3 +75,9 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: b901b9668456490438bec2c307c00335, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a57d19eb4452ff498c17131cefb7882, type: 3}
+--- !u!1 &3815190493789200517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100048, guid: 4a57d19eb4452ff498c17131cefb7882,
+    type: 3}
+  m_PrefabInstance: {fileID: 3815190493789234773}
+  m_PrefabAsset: {fileID: 0}
