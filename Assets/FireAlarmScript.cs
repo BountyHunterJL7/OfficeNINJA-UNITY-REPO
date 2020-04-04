@@ -9,6 +9,7 @@ public class FireAlarmScript : MonoBehaviour
     public AudioSource alarmSound;
     private float bossDistance;
     private float playerDistance;
+    private bool alarmOnce = false;
     Animator animOther;
     private LayerMask layerMask;
 
@@ -47,17 +48,19 @@ public class FireAlarmScript : MonoBehaviour
         {
             //Debug.LogError("Ray");
             playerDistance = Vector3.Distance(player.position, transform.position);
-            if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0)
+            if (hit.transform.tag == "FireAlarm" && Input.GetMouseButtonDown(0) && playerDistance<3.0 && alarmOnce == false)
             {
                 Debug.Log("You clicked");
                 animOther.SetBool("alarmRinging", true);
                 alarmSound.Play();
+                alarmOnce = true;
 
             }
 
             bossDistance = Vector3.Distance(boss.position, transform.position);
             if(bossDistance < 4.0)
             {
+                animOther.SetBool("idle", true);
                 animOther.SetBool("alarmRinging", false);
                 alarmSound.Stop();
 
