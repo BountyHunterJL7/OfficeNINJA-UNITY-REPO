@@ -172,7 +172,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -205,11 +205,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100048, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_Name
-      value: mesh_office_m_boss01
+      value: Im da cake boss
       objectReference: {fileID: 0}
     - target: {fileID: 100048, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_TagString
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5336386
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.46351117
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5374902
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4598822
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -258,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 376ebf45b1850364cb05dce2c7405c8e, type: 2}
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0

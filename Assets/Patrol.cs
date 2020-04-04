@@ -19,7 +19,7 @@ public class Patrol : NPCbaseFSM
         
         waypoints = GameObject.FindGameObjectsWithTag("waypoint");
         base.OnStateEnter(animator,stateInfo,layerIndex);
-        currentWP = Random.Range(1, 7);
+        currentWP = Random.Range(1, waypoints.Length - 1);
         agent.isStopped = false;
     }
 
@@ -32,7 +32,7 @@ public class Patrol : NPCbaseFSM
         if (Vector3.Distance(waypoints[currentWP].transform.position, 
         NPC.transform.position) < accuracy)
         {
-            currentWP = Random.Range(1, 7);
+            currentWP = Random.Range(1, waypoints.Length - 1);
             if (currentWP >= waypoints.Length)
             {
                 currentWP = 0;
