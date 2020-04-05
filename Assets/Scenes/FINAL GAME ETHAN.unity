@@ -337,7 +337,6 @@ GameObject:
   - component: {fileID: 94199564}
   - component: {fileID: 94199563}
   - component: {fileID: 94199562}
-  - component: {fileID: 94199561}
   - component: {fileID: 94199559}
   - component: {fileID: 94199560}
   m_Layer: 0
@@ -379,20 +378,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &94199561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94199558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766cea373d4f7d248a4bb4d100b1ba6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 921259059}
-  SmoothFator: 1
 --- !u!23 &94199562
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -446,12 +431,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94199558}
-  m_LocalRotation: {x: -0, y: 0.86602545, z: -0.50000006, w: 0.000000029802322}
-  m_LocalPosition: {x: 12.870162, y: 3.48, z: 15.746551}
-  m_LocalScale: {x: 0.21965027, y: 0.21965009, z: 0.21965018}
+  m_LocalRotation: {x: -0.39666504, y: 0.5272292, z: -0.3043959, w: -0.687044}
+  m_LocalPosition: {x: 0.29606965, y: 3.48, z: -0.079475194}
+  m_LocalScale: {x: 0.21965048, y: 0.21965018, z: 0.21965036}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_Father: {fileID: 921259059}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 60.000004, y: 180, z: 0}
 --- !u!1001 &95308933
 PrefabInstance:
@@ -4618,7 +4603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6766,7 +6751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 921259059}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1302543792
 PrefabInstance:
