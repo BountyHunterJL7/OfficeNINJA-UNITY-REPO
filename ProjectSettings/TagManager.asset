@@ -20,6 +20,7 @@ TagManager:
   - NPCwaypoint
   - alert
   - hallpoints
+  - Safezone
   layers:
   - Default
   - TransparentFX
