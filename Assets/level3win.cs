@@ -8,6 +8,6 @@ public class level3win : MonoBehaviour
      void OnTriggerEnter(Collider other)
  {
     if(other.gameObject.tag=="Player")
-     SceneManager.LoadScene("andrew level");  
+     SceneManager.LoadScene("Level4");  
  }
 }
