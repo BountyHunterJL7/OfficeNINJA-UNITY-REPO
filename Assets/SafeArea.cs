@@ -17,10 +17,8 @@ public class SafeArea : MonoBehaviour
         {
             Debug.Log("Player is in the safe area");
             boss.GetComponent<lose>().safeArea = true;
-            boss.GetComponent<BossAI>().playerSafe = true;
-            boss.GetComponent<FieldofView>().playerSafe = true;
+            boss.GetComponent<Animator>().SetBool("playerFound", false);
             
-           
         }
             
     }
@@ -31,9 +29,7 @@ public class SafeArea : MonoBehaviour
         {
             Debug.Log("Player is in the safe area");
             boss.GetComponent<lose>().safeArea = true;
-            boss.GetComponent<BossAI>().playerSafe = true;
-            boss.GetComponent<FieldofView>().playerSafe = true;
-
+            boss.GetComponent<Animator>().SetBool("playerFound", false);
         }
     }
 
@@ -43,11 +39,7 @@ public class SafeArea : MonoBehaviour
         {
             Debug.Log("Player is not in the safe area");
             boss.GetComponent<lose>().safeArea = false;
-            boss.GetComponent<BossAI>().playerSafe = false;
-            boss.GetComponent<FieldofView>().playerSafe = false;
-
-
-
+            boss.GetComponent<Animator>().SetBool("playerFound", false);
         }
         
     }
