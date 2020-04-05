@@ -3,33 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Patrol : NPCbaseFSM
+public class HallPatrol : NPCbaseFSM
 {
     GameObject[] waypoints;
     int currentWP;
 
     void awake()
     {
-        waypoints = GameObject.FindGameObjectsWithTag("waypoint");
+        waypoints = GameObject.FindGameObjectsWithTag("hallpoints");
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
-        waypoints = GameObject.FindGameObjectsWithTag("waypoint");
-        base.OnStateEnter(animator,stateInfo,layerIndex);
+
+        waypoints = GameObject.FindGameObjectsWithTag("hallpoints");
+        base.OnStateEnter(animator, stateInfo, layerIndex);
         currentWP = Random.Range(0, waypoints.Length);
         agent.isStopped = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {   
+    {
 
-        if(waypoints.Length == 0) return;
-        
-        if (Vector3.Distance(waypoints[currentWP].transform.position, 
+        if (waypoints.Length == 0) return;
+
+        if (Vector3.Distance(waypoints[currentWP].transform.position,
         NPC.transform.position) < accuracy)
         {
             currentWP = Random.Range(0, waypoints.Length);

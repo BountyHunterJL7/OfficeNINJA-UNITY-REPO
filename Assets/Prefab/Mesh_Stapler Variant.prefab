@@ -58,7 +58,7 @@ MonoBehaviour:
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   HoldCheck: 0
-  HitSound: {fileID: 0}
+  HitSound: {fileID: 8300000, guid: cc574baa9f157404880a44453ba91702, type: 3}
   AlertOject: {fileID: 7499453097272061363, guid: 51d3b2b6d60045c4b9ebd60e3eb0fc1c,
     type: 3}
   hitAnim: {fileID: 5125654756088826273, guid: 9ba5df28ea5f85d489257b09792b6aea, type: 3}

@@ -37,7 +37,7 @@ public class ObjectScript : MonoBehaviour
         HoldCheck = PlayerPosition.GetComponent<HoldCheck>().IsHolding;
         if (Physics.SphereCast(cursorRay, 0.6f, out hit, Mathf.Infinity, layerMask) || Input.GetMouseButton(0) || Input.GetMouseButton(1))
         {
-            Debug.LogWarning(hit.collider.name);
+            //Debug.LogWarning(hit.collider.name);
             if (!HoldCheck && Input.GetMouseButtonDown(0) && PlayerDistance() < 3f && !Thrown && hit.collider.name == gameObject.name)
             {
                 //Debug.LogWarning(hit.collider.name);

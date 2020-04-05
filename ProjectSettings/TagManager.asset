@@ -19,6 +19,7 @@ TagManager:
   - FireAlarm
   - NPCwaypoint
   - alert
+  - hallpoints
   layers:
   - Default
   - TransparentFX
