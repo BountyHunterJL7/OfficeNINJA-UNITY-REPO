@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class level5win : MonoBehaviour
+public class level1win : MonoBehaviour
 {
      void OnTriggerEnter(Collider other)
  {
     if(other.gameObject.tag=="Player")
-     SceneManager.LoadScene("Level 6");  
+     SceneManager.LoadScene("Level2");  
  }
 }
