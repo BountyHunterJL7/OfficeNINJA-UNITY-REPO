@@ -8,7 +8,7 @@ public class Alert : MonoBehaviour
    void Start ()
    {
        GetComponent<Renderer>().enabled = false;
-        alert = false;
+       alert = false;
    }
 
    void Update ()

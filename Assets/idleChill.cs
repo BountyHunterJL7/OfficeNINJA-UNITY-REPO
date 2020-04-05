@@ -15,7 +15,6 @@ public class idleChill : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     { 
             timeLeft -= Time.deltaTime;
-            Debug.Log(timeLeft);
             if (timeLeft< 0)
             {
                 animator.SetBool("idle", false);
