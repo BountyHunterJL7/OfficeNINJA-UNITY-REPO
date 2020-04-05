@@ -7,6 +7,7 @@ public class HallPatrol : NPCbaseFSM
 {
     GameObject[] waypoints;
     int currentWP;
+    public AudioSource fstep;
 
     void awake()
     {
@@ -18,9 +19,11 @@ public class HallPatrol : NPCbaseFSM
     {
 
         waypoints = GameObject.FindGameObjectsWithTag("hallpoints");
+        Debug.LogError(animator.gameObject.name);
         base.OnStateEnter(animator, stateInfo, layerIndex);
         currentWP = Random.Range(0, waypoints.Length);
         agent.isStopped = false;
+        fstep = animator.gameObject.GetComponent<AudioSource>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -38,9 +41,16 @@ public class HallPatrol : NPCbaseFSM
                 currentWP = 0;
             }
         }
-
+        
 
         agent.SetDestination(waypoints[currentWP].transform.position);
+
+        if (!fstep.isPlaying && fstep != null)
+        {
+            fstep.volume = Random.Range(0.8f, 1);
+            fstep.pitch = Random.Range(0.8f, 1.1f);
+            fstep.Play();
+        }
         //rotate to face target waypoint
         // var direction = waypoints[currentWP].transform.position - NPC.transform.position;
         // NPC.transform.rotation = Quaternion.Slerp(NPC.transform.rotation, 
@@ -49,6 +59,17 @@ public class HallPatrol : NPCbaseFSM
 
         // NPC.transform.Translate(0, 0, Time.deltaTime * speed);
 
+    }
+
+    void FixedUpdate()
+    {
+        Debug.Log("jamasdasdasdasdasd");
+        if (!fstep.isPlaying)
+        {
+            fstep.volume = Random.Range(0.8f, 1);
+            fstep.pitch = Random.Range(0.8f, 1.1f);
+            fstep.Play();
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -10,7 +10,7 @@ public class RemoveObj : MonoBehaviour
     void Start()
     {
         //Deleting = false;
-        Object.Destroy(gameObject, 6.0f);
+        Object.Destroy(gameObject, 4.0f);
 
     }
 
