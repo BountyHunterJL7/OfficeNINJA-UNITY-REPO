@@ -2426,6 +2426,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5336386
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.46351117
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5374902
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4598822
+      objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -2473,7 +2489,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 376ebf45b1850364cb05dce2c7405c8e, type: 2}
+      objectReference: {fileID: 9100000, guid: 17efa249a02d64f4f9f9e524a8cc7c09, type: 2}
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -5673,6 +5689,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5336386
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.46351117
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5374902
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4598822
+      objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.979837
@@ -5720,7 +5752,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 376ebf45b1850364cb05dce2c7405c8e, type: 2}
+      objectReference: {fileID: 9100000, guid: 17efa249a02d64f4f9f9e524a8cc7c09, type: 2}
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -12591,6 +12623,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5336386
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.46351117
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5374902
+      objectReference: {fileID: 0}
+    - target: {fileID: 400034, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4598822
+      objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9
@@ -12638,7 +12686,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 376ebf45b1850364cb05dce2c7405c8e, type: 2}
+      objectReference: {fileID: 9100000, guid: 17efa249a02d64f4f9f9e524a8cc7c09, type: 2}
     - target: {fileID: 9500000, guid: 185bfac8d64a19645a089256063d89ca, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0

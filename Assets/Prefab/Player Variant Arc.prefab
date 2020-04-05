@@ -30,6 +30,20 @@ CapsuleCollider:
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!136 &1491811697335583968
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650343337174592828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!120 &1780053893
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -126,52 +140,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &1780053889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3650343337174592828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfcbdb5dcbee3c14da25a7db384c94a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fstep: {fileID: 579843577479152045}
---- !u!114 &1780053891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3650343337174592828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f7c4f61555ed2448ae110681b80dfc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsHolding: 0
-  MainCam: {fileID: 0}
-  lr: {fileID: 1780053893}
-  ThrowPoint: {x: 0, y: 0, z: 0}
-  LineSegment: 10
-  ThrowIndicator: {fileID: 8423268803830280530, guid: 1a398952d7330c148acde60a7333d3b8,
-    type: 3}
-  IndVis: 0
---- !u!114 &1780053894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3650343337174592828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03925abcd107f6f4c8d4435c4c11cfd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  safeArea: 0
 --- !u!82 &579843577479152045
 AudioSource:
   m_ObjectHideFlags: 0
@@ -268,6 +236,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1780053889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650343337174592828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcbdb5dcbee3c14da25a7db384c94a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fstep: {fileID: 579843577479152045}
+--- !u!114 &1780053891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650343337174592828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7c4f61555ed2448ae110681b80dfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsHolding: 0
+  MainCam: {fileID: 0}
+  lr: {fileID: 1780053893}
+  ThrowPoint: {x: 0, y: 0, z: 0}
+  LineSegment: 10
+  ThrowIndicator: {fileID: 8423268803830280530, guid: 1a398952d7330c148acde60a7333d3b8,
+    type: 3}
+  IndVis: 0
+--- !u!114 &1780053894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650343337174592828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03925abcd107f6f4c8d4435c4c11cfd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safeArea: 0
 --- !u!1001 &3650343337174559724
 PrefabInstance:
   m_ObjectHideFlags: 0
