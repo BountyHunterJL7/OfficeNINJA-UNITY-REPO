@@ -18,6 +18,7 @@ MonoBehaviour:
   speed: 7
   rotSpeed: 15
   accuracy: 3
+  fstep: {fileID: 0}
 --- !u!1101 &-7092898233490938150
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -61,6 +62,7 @@ MonoBehaviour:
   speed: 2
   rotSpeed: 1
   accuracy: 3
+  fstep: {fileID: 0}
 --- !u!1101 &-6410089665127894829
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
