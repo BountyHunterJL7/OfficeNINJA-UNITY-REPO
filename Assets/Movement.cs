@@ -19,6 +19,8 @@ public class Movement : MonoBehaviour
     Animator anim;
 
     Rigidbody rb;
+
+    public AudioSource fstep; 
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,13 @@ public class Movement : MonoBehaviour
         if(moveVel.x>0 || moveVel.z>0 || moveVel.x<0 || moveVel.z < 0)
         {
             anim.SetBool("walking", true);
+            if (!fstep.isPlaying)
+            {
+                fstep.volume = Random.Range(0.8f, 1);
+                fstep.pitch = Random.Range(0.8f, 1.1f);
+                fstep.Play();
+            }
+            
         }
         else if(moveVel.x==0 && moveVel.z == 0)
         {

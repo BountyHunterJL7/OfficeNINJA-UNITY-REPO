@@ -7,6 +7,7 @@ public class Patrol : NPCbaseFSM
 {
     GameObject[] waypoints;
     int currentWP;
+    public AudioSource fstep;
 
     void awake()
     {
@@ -21,6 +22,7 @@ public class Patrol : NPCbaseFSM
         base.OnStateEnter(animator,stateInfo,layerIndex);
         currentWP = Random.Range(0, waypoints.Length);
         agent.isStopped = false;
+        fstep = animator.gameObject.GetComponent<AudioSource>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,6 +41,12 @@ public class Patrol : NPCbaseFSM
             }
         }
 
+        if (!fstep.isPlaying && fstep != null)
+        {
+            fstep.volume = Random.Range(0.8f, 1);
+            fstep.pitch = Random.Range(0.8f, 1.1f);
+            fstep.Play();
+        }
 
         agent.SetDestination(waypoints[currentWP].transform.position);
         //rotate to face target waypoint
