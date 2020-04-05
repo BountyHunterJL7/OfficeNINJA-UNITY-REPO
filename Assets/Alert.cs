@@ -13,7 +13,7 @@ public class Alert : MonoBehaviour
 
    void Update ()
    {
-       transform.rotation = Quaternion.identity;
+        transform.rotation = Quaternion.Euler(0, -180, 0);
        if (alert)
        {
             GetComponent<Renderer>().enabled = true;

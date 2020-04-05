@@ -11,7 +11,7 @@ public class SafeArea : MonoBehaviour
         //GameObject alertSet = GameObject.FindWithTag("alert");
 
     }
-    /*
+    
     private void OnTriggerEnter(Collider other) // When the player enters a "Safe" area
     {
         if (other.gameObject.tag.Equals("Boss"))
@@ -33,8 +33,8 @@ public class SafeArea : MonoBehaviour
         }
 
     }
-    */
-    /*
+    
+    
     private void OnTriggerStay(Collider other) // When the player stays in a "Safe" area
     {
 
