@@ -13,6 +13,7 @@ public class Alert : MonoBehaviour
 
    void Update ()
    {
+       transform.rotation = Quaternion.identity;
        if (alert)
        {
             GetComponent<Renderer>().enabled = true;

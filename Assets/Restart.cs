@@ -8,6 +8,6 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     public void restartGame()
     {
-        SceneManager.LoadScene("FINAL GAME ETHAN");
+        SceneManager.LoadScene(PlayerPrefs.GetString("_last_scene_"));
     }
 }

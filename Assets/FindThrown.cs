@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class FindThrown : NPCbaseFSM
 {
     GameObject[] Distractions;
-
+    public AudioSource fstep;
     void awake()
     {
         Distractions = GameObject.FindGameObjectsWithTag("DistractionPoint");
@@ -18,6 +18,7 @@ public class FindThrown : NPCbaseFSM
     {
         Distractions = GameObject.FindGameObjectsWithTag("DistractionPoint");
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        fstep = animator.gameObject.GetComponent<AudioSource>();
         //agent.isStopped = false;
     }
 
@@ -38,7 +39,13 @@ public class FindThrown : NPCbaseFSM
         {
             agent.destination = Distractions[0].transform.position;
         }
-        
+        if (!fstep.isPlaying && fstep != null)
+        {
+            fstep.volume = Random.Range(0.8f, 1);
+            fstep.pitch = Random.Range(0.8f, 1.1f);
+            fstep.Play();
+        }
+
         /*
         if (Vector3.Distance(Distractions[0].transform.position,
         NPC.transform.position) < accuracy)

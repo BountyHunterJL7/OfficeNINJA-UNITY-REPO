@@ -19,7 +19,7 @@ public class HallPatrol : NPCbaseFSM
     {
 
         waypoints = GameObject.FindGameObjectsWithTag("hallpoints");
-        Debug.LogError(animator.gameObject.name);
+        //Debug.LogError(animator.gameObject.name);
         base.OnStateEnter(animator, stateInfo, layerIndex);
         currentWP = Random.Range(0, waypoints.Length);
         agent.isStopped = false;

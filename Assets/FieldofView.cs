@@ -36,9 +36,9 @@ public class FieldofView : MonoBehaviour
 
 
 		//changing alert bool
-		GameObject alertSet = GameObject.FindWithTag("alert");
+		//GameObject alertSet = GameObject.FindWithTag("alert");
 
-		boolSet = alertSet.GetComponent<Alert>();
+		//boolSet = alertSet.GetComponent<Alert>();
 	}
 
 
@@ -192,5 +192,7 @@ public class FieldofView : MonoBehaviour
 			pointB = _pointB;
 		}
 	}
+
+
 
 }
