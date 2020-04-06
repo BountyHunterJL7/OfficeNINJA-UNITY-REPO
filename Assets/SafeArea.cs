@@ -56,7 +56,7 @@ public class SafeArea : MonoBehaviour
         }
     }
 
-    /*
+    
     private void OnTriggerExit(Collider other) // When the player exits a "Safe" area
     {
         if (other.gameObject.tag.Equals("Boss"))
@@ -77,7 +77,7 @@ public class SafeArea : MonoBehaviour
 
         }
     }
-    */
+    
 
     // Start is called before the first frame update
     
