@@ -847,7 +847,7 @@ PrefabInstance:
     - target: {fileID: 1619375867, guid: be11f12aab5bdfa4b814a43d833b2a6f, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: bfb5c4944fa3ebd438d4550d432a155b, type: 3}
     - target: {fileID: 1619375868, guid: be11f12aab5bdfa4b814a43d833b2a6f, type: 3}
       propertyPath: MinDistance
       value: 1.0297894
@@ -1941,7 +1941,7 @@ PrefabInstance:
     - target: {fileID: 880607090, guid: f29383b465507c14d90bd233be76a944, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: cc574baa9f157404880a44453ba91702, type: 3}
     - target: {fileID: 3673467655928022660, guid: f29383b465507c14d90bd233be76a944,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2108,7 +2108,7 @@ PrefabInstance:
     - target: {fileID: 1619375867, guid: be11f12aab5bdfa4b814a43d833b2a6f, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 8ee1b246c3b3ff245b652d1059915f25, type: 3}
     - target: {fileID: 4925261501984048889, guid: be11f12aab5bdfa4b814a43d833b2a6f,
         type: 3}
       propertyPath: m_Name
@@ -4177,7 +4177,7 @@ PrefabInstance:
     - target: {fileID: 1619375867, guid: be11f12aab5bdfa4b814a43d833b2a6f, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 8ee1b246c3b3ff245b652d1059915f25, type: 3}
     - target: {fileID: 4925261501984048889, guid: be11f12aab5bdfa4b814a43d833b2a6f,
         type: 3}
       propertyPath: m_Name
@@ -7952,7 +7952,7 @@ PrefabInstance:
     - target: {fileID: 880607090, guid: f29383b465507c14d90bd233be76a944, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: cc574baa9f157404880a44453ba91702, type: 3}
     - target: {fileID: 3673467655928022660, guid: f29383b465507c14d90bd233be76a944,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10908,7 +10908,7 @@ PrefabInstance:
     - target: {fileID: 1619375867, guid: be11f12aab5bdfa4b814a43d833b2a6f, type: 3}
       propertyPath: HitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 6ba43553136266848a1bfdcef86a73fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 8ee1b246c3b3ff245b652d1059915f25, type: 3}
     - target: {fileID: 4925261501984048889, guid: be11f12aab5bdfa4b814a43d833b2a6f,
         type: 3}
       propertyPath: m_Name
