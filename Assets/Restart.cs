@@ -9,5 +9,10 @@ public class Restart : MonoBehaviour
     public void restartGame()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("_last_scene_"));
+        
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("menu");
     }
 }
