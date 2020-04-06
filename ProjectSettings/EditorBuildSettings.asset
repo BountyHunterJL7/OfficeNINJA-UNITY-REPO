@@ -29,8 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: 3059f7c7266e98b4b9e82a5c694e4cea
-  - enabled: 1
-    path: Assets/Scenes/Win.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/221b640eb90267a4d97554bef466ac43
     guid: 221b640eb90267a4d97554bef466ac43
   - enabled: 1
     path: Assets/Scenes/GAME.unity
@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: ad74fc3aed0144cee8f2273714f604fe
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 5197753f7fe279b4c9072191d1fcdeaf
   m_configObjects: {}
