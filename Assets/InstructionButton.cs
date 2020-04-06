@@ -8,6 +8,6 @@ public class InstructionButton : MonoBehaviour
 
     public void GameInstruction()
     {
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene("Instructions");
     }
 }
