@@ -8217,7 +8217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a3cd7ba2026e4604986000271e5f0f57, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 6c49f2c0f425757488acdc05d7938f24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -13444,7 +13444,7 @@ PrefabInstance:
         type: 3}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 966933709}
     - target: {fileID: 8093607129768986193, guid: a7dc54d2f78708d4e956ac99adb7e99a,
         type: 3}
       propertyPath: alarmSound
